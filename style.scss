@@ -302,60 +302,60 @@ main{
         }
     }
 
-    // .block-3{
-    //     background-color: lightpink;
-    //     width: 100%;
-    //     min-height: 100vh;
-    //     max-width: 120rem;
-    //     margin: auto;
-    //     padding: 0 1.5rem;
-    //     // width: 100%;
-    //     // margin: 0 auto;
-    //     .gallery{
-    //         display:grid;
-    //         grid-template-columns: 1fr 1fr 1fr 1fr;
-    //         grid-template-rows: auto;
-    //         grid-gap: 1.5rem;
-    //         // grid-template-areas: ;
+    .block-3{
+        background-color: lightpink;
+        width: 100%;
+        min-height: 100vh;
+        max-width: 120rem;
+        margin: auto;
+        padding: 0 1.5rem;
+        // width: 100%;
+        // margin: 0 auto;
+        .gallery{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1.5rem;
+            // grid-template-areas: ;
 
-    //         a{
-    //             color: yellow;
-    //             width: 100%;
-    //             height: 25rem;
-    //             background-position: center;
-    //             background-repeat: no-repeat;
-    //             background-size: cover;
-    //             position: relative;
-    //             display: flex;
-    //             align-items: center;
-    //             justify-content: center;
-    //             text-decoration:none;
+            a{
+                color: yellow;
+                width: 100%;
+                height: 25rem;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration:none;
 
-    //             i{
-    //                 font-size: 2rem;
-    //                 position: relative;
-    //                 z-index: 1;
-    //                 padding-block: 1rem 3rem;
-    //                 border: 2px solid #fff;
-    //                 border-radius: .4rem;
-    //                 // opacity: 0;
-    //                 transition: opacity .5s;
+                i{
+                    font-size: 2rem;
+                    position: relative;
+                    z-index: 1;
+                    padding-block: 1rem 3rem;
+                    border: 2px solid #fff;
+                    border-radius: .4rem;
+                    // opacity: 0;
+                    transition: opacity .5s;
 
-    //             }
-    //         }
+                }
+            }
 
-    //         a::before{
-    //             content: "";
-    //             position: absolute;
-    //             width: 100%;
-    //             height: 100%;
-    //             top:0;
-    //             left:0;
-    //             background-color: black;
-    //         }
+            a::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top:0;
+                left:0;
+                background-color: black;
+            }
 
-    //     }
-    // }
+        }
+    }
 }
 
 

@@ -126,3 +126,4 @@ var docWidth = document.documentElement.offsetWidth;
     }
   }
 );
+
