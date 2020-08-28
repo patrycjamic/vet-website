@@ -451,6 +451,23 @@ main{
 
 
 @media screen and(max-width:768px){
+
+    // NOT A GOOD PRACTICE
+    .vets{
+        .img-container{
+            width: 120px!important;
+            height: 120px!important;
+        }
+
+        .text-wrap{
+            h2{
+                font-size: 14px!important;
+            }
+            p{font-size: 12px!important;}
+        }
+    }
+    //
+
     .logo{
         margin: auto;
     }
@@ -515,6 +532,26 @@ main{
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+
+@media screen and(max-width:350px){
+
+    // BAD PRACTICE 
+
+    // .vets{
+    //     .img-container{
+    //         width: 100px!important;
+    //         height: 100px!important;
+    //     }
+
+    //     .text-wrap{
+    //         h2{
+    //             font-size: 12px!important;
+    //         }
+    //         p{font-size: 10px!important;}
+    //     }
+    // }
+
+}
 
 
 

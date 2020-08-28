@@ -494,6 +494,16 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
 }
 
 @media screen and (max-width: 768px) {
+  .vets .img-container {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  .vets .text-wrap h2 {
+    font-size: 14px !important;
+  }
+  .vets .text-wrap p {
+    font-size: 12px !important;
+  }
   .logo {
     margin: auto;
   }
