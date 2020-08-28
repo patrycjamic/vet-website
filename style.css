@@ -23,6 +23,9 @@ header .contact-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -41,8 +44,6 @@ header .contact-row h2 .word-bold {
 }
 
 header .navbar {
-  background-color: #fff;
-  height: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,6 +53,8 @@ header .navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #fff;
+  height: 15vh;
 }
 
 header .navbar .logo {
@@ -79,13 +82,13 @@ header .navbar .menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
   width: 45%;
 }
 
@@ -116,7 +119,7 @@ header .navbar .burger div {
   transition: all 0.3s ease;
   width: 20px;
   height: 3px;
-  background-color: #7fb7eb;
+  background-color: #acd7e6;
   margin: 5px 40px 5px 5px;
 }
 
@@ -167,16 +170,16 @@ main .wrap .slide .slide-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 
@@ -201,17 +204,17 @@ main .block-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 35vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 main .block-title h2 {
@@ -219,7 +222,7 @@ main .block-title h2 {
   font-weight: 500;
 }
 
-main .block-title h2:after {
+main .block-title h2::after {
   content: "";
   display: block;
   margin: 0 auto;
@@ -241,41 +244,40 @@ main .block-1 {
 }
 
 main .block-1 .icons {
-  margin-top: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .block-1 .icons .icon {
-  width: 250px;
-  height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  height: 250px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 main .block-1 .icons .icon .img-container {
   background-color: #acd7e6;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  margin-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,6 +287,10 @@ main .block-1 .icons .icon .img-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 15px;
   border-radius: 50%;
 }
 
@@ -325,6 +331,9 @@ main .block-2 .vets {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 7vh;
@@ -494,16 +503,6 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
 }
 
 @media screen and (max-width: 768px) {
-  .vets .img-container {
-    width: 120px !important;
-    height: 120px !important;
-  }
-  .vets .text-wrap h2 {
-    font-size: 14px !important;
-  }
-  .vets .text-wrap p {
-    font-size: 12px !important;
-  }
   .logo {
     margin: auto;
   }
