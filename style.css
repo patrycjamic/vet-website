@@ -384,8 +384,13 @@ main .block-2 .vets .vet .text-wrap p {
 }
 
 main .block-3 {
+  background-color: #f5f5f5;
   padding: 0;
   text-align: center;
+}
+
+main .block-3 h2 {
+  padding: 5vh 0;
 }
 
 main .block-3 .gallery {
@@ -503,13 +508,17 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .logo {
     margin: auto;
   }
   .menu-list {
     position: fixed;
     right: 0;
-    height: 80vh;
+    height: 80vh !important;
+    width: 50% !important;
     top: 20vh;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#bbdde9));
     background-image: linear-gradient(#fff, #bbdde9);
@@ -523,7 +532,6 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 50% !important;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: -webkit-transform 0.5s ease-in;
@@ -557,18 +565,9 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
   }
 }
 
-.toggle .line1 {
-  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
-          transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  -webkit-transform: rotate(45deg) translate(-5px, -6px);
-          transform: rotate(45deg) translate(-5px, -6px);
+.nav-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 @-webkit-keyframes navLinkFade {
@@ -597,8 +596,17 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
   }
 }
 
-.nav-active {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
 }
 /*# sourceMappingURL=style.css.map */
