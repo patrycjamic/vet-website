@@ -1,3 +1,4 @@
+
 $dominantColor: #acd7e6;
 $oddsBlocks: #f5f5f5;
 
@@ -433,16 +434,17 @@ main{
 }
 
 
-
 @media screen and(max-width:1024px){
     .menu-list{
         width: 60%;
     }
 
+
 }
 
 
-@media screen and(max-width:768px){
+
+@media screen and (min-width:360px) and (max-width:768px){
 
     body{
         overflow-x: hidden;
@@ -450,19 +452,19 @@ main{
     
 
     // NOT A GOOD PRACTICE
-    // .vets{
-    //     .img-container{
-    //         width: 120px;
-    //         height: 120px;
-    //     }
+    .vets{
+        .img-container{
+            width: 120px;
+            height: 120px;
+        }
 
-    //     .text-wrap{
-    //         h2{
-    //             font-size: 14px;
-    //         }
-    //         p{font-size: 12px;}
-    //     }
-    // }
+        .text-wrap{
+            h2{
+                font-size: 14px;
+            }
+            p{font-size: 12px;}
+        }
+    }
     
 
     .logo{
@@ -470,6 +472,7 @@ main{
     }
 
     .menu-list{
+        // display: none;
         position: fixed;
         right: 0;
         height:80vh!important;
@@ -522,23 +525,27 @@ main{
 
 
 
+
+
 // @media screen and(max-width:350px){
 
 //     // BAD PRACTICE 
 
-//     // .vets{
-//     //     .img-container{
-//     //         width: 100px!important;
-//     //         height: 100px!important;
-//     //     }
 
-//     //     .text-wrap{
-//     //         h2{
-//     //             font-size: 12px!important;
-//     //         }
-//     //         p{font-size: 10px!important;}
-//     //     }
-//     // }
+
+//     .vets{
+//         .img-container{
+//             width: 100px!important;
+//             height: 100px!important;
+//         }
+
+//         .text-wrap{
+//             h2{
+//                 font-size: 12px!important;
+//             }
+//             p{font-size: 10px!important;}
+//         }
+//     }
 
 // }
 
@@ -582,6 +589,7 @@ main{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
 
 
 
