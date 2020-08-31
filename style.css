@@ -74,7 +74,13 @@ header .navbar .logo h2 {
   letter-spacing: 2px;
 }
 
-header .navbar .logo img {
+header .navbar .logo a {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 0;
+}
+
+header .navbar .logo a img {
   width: 85px;
 }
 
@@ -132,11 +138,11 @@ header .navbar .burger div {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-main .wrap {
+.main-content .wrap {
   position: relative;
 }
 
-main .wrap .arrow {
+.main-content .wrap .arrow {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -146,27 +152,27 @@ main .wrap .arrow {
   border-style: solid;
 }
 
-main .wrap #arrow-left {
+.main-content .wrap #arrow-left {
   border-width: 30px 40px 30px 0;
   left: 0;
   margin-left: 30px;
   border-color: transparent #fff transparent transparent;
 }
 
-main .wrap #arrow-right {
+.main-content .wrap #arrow-right {
   border-width: 30px 0px 30px 40px;
   right: 0;
   margin-right: 30px;
   border-color: transparent transparent transparent #fff;
 }
 
-main .wrap .slide {
+.main-content .wrap .slide {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-main .wrap .slide .slide-content {
+.main-content .wrap .slide .slide-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,24 +189,31 @@ main .wrap .slide .slide-content {
   text-align: center;
 }
 
-main .wrap .slide .slide-content span {
+.main-content .wrap .slide .slide-content span {
   font-size: 3rem;
   color: #fff;
 }
 
-main .wrap .slide1 {
+.main-content .wrap .slide1 {
   background-image: url(img/dog.jpg);
 }
 
-main .wrap .slide2 {
+.main-content .wrap .slide2 {
   background-image: url(img/cat.jpg);
 }
 
-main .wrap .slide3 {
+.main-content .wrap .slide3 {
   background-image: url(img/dog-white.jpg);
 }
 
-main .block-title {
+.main-content a.anchor {
+  display: block;
+  position: relative;
+  bottom: 20vh;
+  visibility: hidden;
+}
+
+.main-content .block-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,19 +223,18 @@ main .block-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 35vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-main .block-title h2 {
+.main-content .block-title h2 {
   font-size: 25px;
   font-weight: 500;
 }
 
-main .block-title h2::after {
+.main-content .block-title h2::after {
   content: "";
   display: block;
   margin: 0 auto;
@@ -231,19 +243,23 @@ main .block-title h2::after {
   padding-top: 15px;
 }
 
-main .block-title p {
+.main-content .block-title p {
   margin-top: 5vh;
   text-align: center;
   letter-spacing: 1px;
   line-height: 26px;
 }
 
-main .block-1 {
+.main-content .block-1 {
   min-height: 80vh;
   background-color: #f5f5f5;
 }
 
-main .block-1 .icons {
+.main-content .block-1 .block-title {
+  min-height: 30vh;
+}
+
+.main-content .block-1 .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,7 +274,7 @@ main .block-1 .icons {
       flex-wrap: wrap;
 }
 
-main .block-1 .icons .icon {
+.main-content .block-1 .icons .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,7 +292,7 @@ main .block-1 .icons .icon {
   text-align: center;
 }
 
-main .block-1 .icons .icon .img-container {
+.main-content .block-1 .icons .icon .img-container {
   background-color: #acd7e6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,37 +310,42 @@ main .block-1 .icons .icon .img-container {
   border-radius: 50%;
 }
 
-main .block-1 .icons .icon .img-container img {
+.main-content .block-1 .icons .icon .img-container img {
   height: 45%;
   width: 45%;
 }
 
-main .block-1 .icons .icon .text-wrap {
+.main-content .block-1 .icons .icon .text-wrap {
   border-top: 1px dashed lightgray;
   text-align: center;
   padding: 10px;
   height: 50%;
 }
 
-main .block-1 .icons .icon h2 {
+.main-content .block-1 .icons .icon h2 {
   font-size: 1em;
   margin-bottom: 2px;
 }
 
-main .block-1 .icons .icon p {
+.main-content .block-1 .icons .icon p {
   font-size: 13px;
 }
 
-main .block-2 {
+.main-content reference-div {
+  position: absolute;
+  bottom: 20vh;
+}
+
+.main-content .block-2 {
   min-height: 80vh;
   background-color: #acd7e6;
 }
 
-main .block-2 .block-title {
-  min-height: 25vh;
+.main-content .block-2 .block-title {
+  min-height: 20vh;
 }
 
-main .block-2 .vets {
+.main-content .block-2 .vets {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,13 +360,13 @@ main .block-2 .vets {
   margin-top: 7vh;
 }
 
-main .block-2 .vets .vet {
+.main-content .block-2 .vets .vet {
   margin: auto 15px;
   width: 500px;
   height: 200px;
 }
 
-main .block-2 .vets .vet .img-container {
+.main-content .block-2 .vets .vet .img-container {
   border: 2px solid #fff;
   height: 180px;
   width: 180px;
@@ -357,15 +378,15 @@ main .block-2 .vets .vet .img-container {
           box-shadow: inset 0 0 0 2000px rgba(68, 67, 68, 0.3);
 }
 
-main .block-2 .vets .vet .vet1 {
+.main-content .block-2 .vets .vet .vet1 {
   background-image: url(img/doc1.jpg);
 }
 
-main .block-2 .vets .vet .vet2 {
+.main-content .block-2 .vets .vet .vet2 {
   background-image: url(img/doc2.jpg);
 }
 
-main .block-2 .vets .vet .text-wrap {
+.main-content .block-2 .vets .vet .text-wrap {
   text-align: center;
   float: right;
   width: 60%;
@@ -375,25 +396,26 @@ main .block-2 .vets .vet .text-wrap {
   border-right: 1px dashed #fff;
 }
 
-main .block-2 .vets .vet .text-wrap h2 {
+.main-content .block-2 .vets .vet .text-wrap h2 {
   font-size: 1em;
 }
 
-main .block-2 .vets .vet .text-wrap p {
+.main-content .block-2 .vets .vet .text-wrap p {
   font-size: 14px;
 }
 
-main .block-3 {
+.main-content .block-3 {
   background-color: #f5f5f5;
   padding: 0;
   text-align: center;
 }
 
-main .block-3 h2 {
-  padding: 5vh 0;
+.main-content .block-3 .block-title {
+  min-height: 20vh;
 }
 
-main .block-3 .gallery {
+.main-content .block-3 .gallery {
+  margin-top: 5vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[6];
@@ -403,33 +425,33 @@ main .block-3 .gallery {
   grid-auto-flow: dense;
 }
 
-main .block-3 .gallery .w-3 {
+.main-content .block-3 .gallery .w-3 {
   grid-column: span 3;
 }
 
-main .block-3 .gallery .w-2 {
+.main-content .block-3 .gallery .w-2 {
   grid-column: span 2;
 }
 
-main .block-3 .gallery .h-2 {
+.main-content .block-3 .gallery .h-2 {
   grid-row: span 2;
 }
 
-main .block-3 .gallery .h-1 {
+.main-content .block-3 .gallery .h-1 {
   grid-row: span 1;
 }
 
-main .block-3 .gallery .w-1 {
+.main-content .block-3 .gallery .w-1 {
   grid-column: span 1;
 }
 
-main .block-3 .gallery .gallery-container .gallery-item {
+.main-content .block-3 .gallery .gallery-container .gallery-item {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-main .block-3 .gallery .gallery-container .gallery-item .text {
+.main-content .block-3 .gallery .gallery-container .gallery-item .text {
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -446,13 +468,13 @@ main .block-3 .gallery .gallery-container .gallery-item .text {
   backdrop-filter: blur(5px) saturate(1.8);
 }
 
-main .block-3 .gallery .gallery-container .gallery-item .image {
+.main-content .block-3 .gallery .gallery-container .gallery-item .image {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-main .block-3 .gallery .gallery-container .gallery-item .image img {
+.main-content .block-3 .gallery .gallery-container .gallery-item .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -464,12 +486,12 @@ main .block-3 .gallery .gallery-container .gallery-item .image img {
   transition: .5s ease-in-out;
 }
 
-main .block-3 .gallery .gallery-container .gallery-item:hover .image img {
+.main-content .block-3 .gallery .gallery-container .gallery-item:hover .image img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-main .block-3 .gallery .gallery-container .gallery-item:hover .text {
+.main-content .block-3 .gallery .gallery-container .gallery-item:hover .text {
   opacity: 1;
   -webkit-animation: move-down .6s linear;
           animation: move-down .6s linear;
@@ -508,35 +530,38 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
 }
 
 @media screen and (max-width: 760px) {
-  header .contact-row h2 {
+  .header-content .contact-row h2 {
     font-size: 12px;
     padding-left: 20px;
   }
-  main .wrap {
+  .main-content .wrap {
     display: none;
   }
-  main .block-title h2 {
+  .main-content .block-title h2 {
     font-size: 20px;
   }
-  main .block-2 .vets .vet .img-container {
+  .main-content .block-2 .vets .vet .img-container {
     width: 120px;
     height: 120px;
   }
-  main .block-2 .vets .vet .text-wrap h2 {
+  .main-content .block-2 .vets .vet .text-wrap h2 {
     font-size: 14px;
   }
-  main .block-2 .vets .vet .text-wrap p {
+  .main-content .block-2 .vets .vet .text-wrap p {
     font-size: 12px;
   }
-  main .block-3 .gallery {
+  .main-content .block-3 {
+    min-height: 80vh;
+  }
+  .main-content .block-3 .gallery {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 50px 150px;
   }
-  main .block-3 .gallery .w-3 {
+  .main-content .block-3 .gallery .w-3 {
     grid-column: span 2;
   }
-  main .block-3 .gallery .media {
+  .main-content .block-3 .gallery .media {
     grid-row: span 2;
   }
   .logo {
@@ -578,18 +603,18 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
 }
 
 @media screen and (max-width: 360px) {
-  header .contact-row h2 {
+  .header-content .contact-row h2 {
     font-size: 10px;
     padding-left: 20px;
   }
-  main .block-2 .vets .vet .img-container {
+  .main-content .block-2 .vets .vet .img-container {
     width: 100px;
     height: 100px;
   }
-  main .block-2 .vets .vet .text-wrap h2 {
+  .main-content .block-2 .vets .vet .text-wrap h2 {
     font-size: 12px;
   }
-  main .block-2 .vets .vet .text-wrap p {
+  .main-content .block-2 .vets .vet .text-wrap p {
     font-size: 11px;
   }
 }
