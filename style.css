@@ -507,18 +507,15 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
   }
 }
 
-@media screen and (min-width: 360px) and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-  .vets .img-container {
+@media screen and (max-width: 760px) {
+  main .block-2 .vets .vet .img-container {
     width: 120px;
     height: 120px;
   }
-  .vets .text-wrap h2 {
+  main .block-2 .vets .vet .text-wrap h2 {
     font-size: 14px;
   }
-  .vets .text-wrap p {
+  main .block-2 .vets .vet .text-wrap p {
     font-size: 12px;
   }
   .logo {
@@ -559,19 +556,6 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
   }
   .wrap {
     display: none;
-  }
-  .wrapper {
-    display: none;
-  }
-  .contact-row h2 {
-    font-size: 11px;
-  }
-  .block-title h2 {
-    font-size: 20px !important;
-  }
-  .gallery {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
   }
 }
 
