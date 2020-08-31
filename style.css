@@ -508,6 +508,16 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
 }
 
 @media screen and (max-width: 760px) {
+  header .contact-row h2 {
+    font-size: 12px;
+    padding-left: 20px;
+  }
+  main .wrap {
+    display: none;
+  }
+  main .block-title h2 {
+    font-size: 20px;
+  }
   main .block-2 .vets .vet .img-container {
     width: 120px;
     height: 120px;
@@ -517,6 +527,17 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
   }
   main .block-2 .vets .vet .text-wrap p {
     font-size: 12px;
+  }
+  main .block-3 .gallery {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 50px 150px;
+  }
+  main .block-3 .gallery .w-3 {
+    grid-column: span 2;
+  }
+  main .block-3 .gallery .media {
+    grid-row: span 2;
   }
   .logo {
     margin: auto;
@@ -554,8 +575,22 @@ main .block-3 .gallery .gallery-container .gallery-item:hover .text {
     cursor: pointer;
     margin-left: auto;
   }
-  .wrap {
-    display: none;
+}
+
+@media screen and (max-width: 360px) {
+  header .contact-row h2 {
+    font-size: 10px;
+    padding-left: 20px;
+  }
+  main .block-2 .vets .vet .img-container {
+    width: 100px;
+    height: 100px;
+  }
+  main .block-2 .vets .vet .text-wrap h2 {
+    font-size: 12px;
+  }
+  main .block-2 .vets .vet .text-wrap p {
+    font-size: 11px;
   }
 }
 

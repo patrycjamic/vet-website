@@ -29,9 +29,6 @@ header{
 
     .contact-row{
         @include flexCenter(flex-start,center);
-        // display: flex;
-        // justify-content: flex-start;
-        // align-items: center;
         height: 5vh;
         background-color: $oddsBlocks;
         
@@ -51,9 +48,6 @@ header{
         @include flexCenter(space-evenly, center);
         background-color: #fff;
         height: 15vh;
-        // display: flex;
-        // justify-content: space-evenly;
-        // align-items: center;
     
         .logo{
             width: 30%;
@@ -74,9 +68,6 @@ header{
         .menu-list{
             @include flexCenter(space-evenly, center);
             height: 100%;
-            // display: flex;
-            // justify-content: space-evenly;
-            // align-items: center;
             width: 45%;
             li{
                 list-style: none;
@@ -164,9 +155,6 @@ main{
             .slide-content{
                 @include flexCenter(center, center);
                 flex-direction: column;
-                // display: flex;
-                // justify-content: center;
-                // align-items: center;
                 text-align: center;
     
     
@@ -187,9 +175,6 @@ main{
         @include flexCenter(flex-end, center);
         min-height: 35vh;
         flex-direction: column;
-        // display: flex;
-        // align-items: center;
-        // justify-content: flex-end;
 
         h2{
             font-size: 25px;
@@ -222,9 +207,6 @@ main{
             @include flexCenter(space-evenly, center);
             margin-top: 5vh;
             flex-wrap: wrap;
-            // display: flex;
-            // justify-content: space-evenly;
-            // align-items: center;
 
             .icon{
                 @include flexCenter(space-around, center);
@@ -232,8 +214,6 @@ main{
                 height: 250px;
                 flex-direction: column;
                 text-align: center;
-                // display: flex;
-                // justify-content: space-around;
 
                 .img-container{
                     background-color: $dominantColor;
@@ -242,9 +222,6 @@ main{
                     height: 100px;
                     margin: 0 auto;
                     margin-bottom: 15px;
-                    // display: flex;
-                    // justify-content: center;
-                    // align-items: center;
                     border-radius: 50%;
 
                     img{
@@ -278,8 +255,6 @@ main{
 
         .vets{
             @include flexCenter(center, center);
-            // display: flex;
-            // justify-content: center;
             flex-wrap: wrap;
             margin-top: 7vh;
             .vet{
@@ -436,6 +411,52 @@ main{
     //     overflow-x: hidden;
     // }
     
+    header{
+        .contact-row{     
+            h2{
+                font-size: 12px;
+                padding-left: 20px;
+            }
+        }
+    }
+    main{
+        .wrap{
+            display: none;
+        }
+        .block-title{
+            h2{
+                font-size: 20px;
+            }
+        }
+        .block-2{
+            .vets{
+                .vet{
+                    .img-container{
+                        width: 120px;
+                        height: 120px;
+                    }
+                    .text-wrap{
+                        h2{
+                            font-size: 14px;
+                        }
+                        p{font-size: 12px;}
+                    }
+                }
+            }
+        }
+
+        .block-3{
+            .gallery{
+                grid-template-columns: repeat(2, 1fr);
+                .w-3{grid-column: span 2;}
+                grid-auto-rows: 50px 150px;
+                .media{grid-row: span 2;}
+            }
+        }
+
+    }
+
+
     // header{
     //     .contact-row{     
     //         h2{
@@ -452,8 +473,8 @@ main{
     //         .menu-list{
     //             position: fixed;
     //             right: 0;
-    //             height:80vh!important;
-    //             width: 50%!important;
+    //             height:80vh;
+    //             width: 50%;
     //             top: 20vh;
     //             background-image:linear-gradient(#fff, rgb(187, 221, 233));
     //             display: flex;
@@ -478,37 +499,8 @@ main{
     
     // }
 
-    main{
-        .block-2{
-            .vets{
-                .vet{
-                    .img-container{
-                        width: 120px;
-                        height: 120px;
-                    }
-                    .text-wrap{
-                        h2{
-                            font-size: 14px;
-                        }
-                        p{font-size: 12px;}
-                    }
-                }
-            }
-        }
-
-
-    }
-
-
-
-
-
-
-
-
-    
-
     //good code
+
 
     .logo{
         margin: auto;
@@ -540,75 +532,41 @@ main{
 
     }
 
-    .wrap{
-        display: none;
-    }
-    // .wrapper{
-    //     display: none;
-    // }
-
-    // .contact-row{
-    //     h2{
-    //         font-size: 11px;
-    //     }
-    // }
-
-    // .block-title{
-    //     h2{
-    //         font-size: 20px!important;
-    //     }
-    // }
-    
     //good code
-
-
-
-    // .menu-list{
-    //     display: none!important;
-    // }
-
-
-    // .gallery{
-    //     grid-template-columns: repeat(2, 1fr)!important;
-    //     .w-3{grid-column: span 2!important;}
-    //     grid-auto-rows: 50px 150px!important;
-    //     .media{grid-row: span 2;}
-
-    // }
-
-    // display: grid;
-    // grid-template-columns: repeat(6, 1fr);
-    // grid-auto-rows: 100px 300px;
-    // grid-gap: 10px;
-    // grid-auto-flow: dense;
-
-    // .w-2{grid-column: span 2;}
-    // .h-2{grid-row: span 2;}
-    // .h-1{grid-row: span 1;}
-    // .w-1{grid-column: span 1;}
-
 }
 
-// @media screen and (max-width:360px){
-//     .vets{
-//         .img-container{
-//             width: 100px!important;
-//             height: 100px!important;
-//         }
+@media screen and (max-width:360px){
+    header{
+        .contact-row{     
+            h2{
+                font-size: 10px;
+                padding-left: 20px;}
+        }
+    }
 
-//         .text-wrap{
-//             h2{
-//                 font-size: 12px!important;
-//             }
-//             p{font-size: 11px!important;}
-//         }
-//     }
-// }
+    main{
+        .block-2{
+            .vets{
+                .vet{
+                    .img-container{
+                        width: 100px;
+                        height: 100px;
+                    }
+                    .text-wrap{
+                        h2{
+                            font-size: 12px;
+                        }
+                        p{font-size: 11px;}
+                    }
+                }
+            }
+        }
+    }
+}
 
 .nav-active{
     transform: translateX(0%);
 }
-
 
 @keyframes navLinkFade{
     from {
