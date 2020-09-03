@@ -128,39 +128,63 @@ runFunctions();
 // );
 
 
-let blueIcons = document.querySelectorAll(".icon > .img-container");
 
-// blueIcon.addEventListener("click", ()=>{
-//     blueIcon.style.backgroundColor = "yellow";
+// let blueIcons = document.querySelectorAll(".icon > .img-container");
+
+// // blueIcon.addEventListener("click", ()=>{
+// //     blueIcon.style.backgroundColor = "yellow";
+// // })
+
+// // for(let i = 0; i < blueIcon.length; i++){
+// //     blueIcon[i].addEventListener("toggle", ()=>{
+// //         blueIcon[i].style.backgroundColor = "yellow";
+// //     })
+// // }
+
+// blueIcons.forEach(function(userItem){
+
+//     // userItem.addEventListener("toggle",()=>{
+        
+//     // })
+
+
+//     userItem.addEventListener("mouseenter", ()=>{
+        
+//         userItem.style.backgroundColor = "yellow";
+//     })
+
+//     userItem.addEventListener("mouseleave", ()=>{
+        
+//         userItem.style.backgroundColor = "#acd7e6";
+//     })
+
+
+
 // })
 
-// for(let i = 0; i < blueIcon.length; i++){
-//     blueIcon[i].addEventListener("toggle", ()=>{
-//         blueIcon[i].style.backgroundColor = "yellow";
-//     })
-// }
 
-blueIcons.forEach(function(userItem){
+// console.log(blueIcon);
+// // console.log(node.parentNode.childNodes[]);
 
-    // userItem.addEventListener("toggle",()=>{
-        
-    // })
-
-
-    userItem.addEventListener("mouseenter", ()=>{
-        
-        userItem.style.backgroundColor = "yellow";
-    })
-
-    userItem.addEventListener("mouseleave", ()=>{
-        
-        userItem.style.backgroundColor = "#acd7e6";
+function scrollAppear(){
+    let text = document.querySelectorAll(".block-title");
+    let textPosition; 
+    let screenPosition = window.innerHeight /1.2;
+    
+    // if(textPosition < screenPosition){
+    //     text.classList.add('appear');
+    // }
+    text.forEach(function(item){
+        textPosition = item.getBoundingClientRect().top;
+        if(textPosition < screenPosition){
+            item.classList.add('appear');
+        }
     })
 
 
 
-})
+}
 
+    window.addEventListener('scroll', scrollAppear);
 
-console.log(blueIcon);
-// console.log(node.parentNode.childNodes[]);
+// scrollAppear();

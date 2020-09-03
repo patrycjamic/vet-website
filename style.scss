@@ -189,6 +189,10 @@ header{
         // min-height: 35vh;
         flex-direction: column;
 
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.8s all ease-in-out;
+
         h2{
             font-size: 25px;
             font-weight: 500;
@@ -210,6 +214,11 @@ header{
             line-height: 26px;
         }
 
+    }
+
+    .appear{
+        opacity: 1;
+        transform: translateY(0px);
     }
 
     .block-1{
@@ -238,6 +247,12 @@ header{
                     margin: 0 auto;
                     margin-bottom: 15px;
                     border-radius: 50%;
+                    transition: .8s ease-in-out;
+                    transition: transform .8s ease-in-out;
+                
+                &:hover{
+                    transform: rotate(360deg);
+                }
 
                     img{
                         height: 45%;
@@ -270,7 +285,7 @@ header{
         min-height: 80vh;
         background-color: $dominantColor;
 
-        .block-title{min-height: 20vh;}
+        .block-title{min-height: 25vh;}
 
         .vets{
             @include flexCenter(center, center);
@@ -321,8 +336,8 @@ header{
         background-color: $oddsBlocks;
         padding: 0;
         text-align: center;
-        .block-title{min-height: 20vh;}
-
+        .block-title{min-height: 25vh;}
+        padding-bottom: 5vh;
 
         // h2{
         //     padding: 5vh 0
@@ -411,6 +426,94 @@ header{
         }
 
     }
+
+    .block-4{
+        min-height: 80vh;
+        .block-title{min-height: 25vh;}
+        background-color: $dominantColor;
+        .container{
+            margin-top: 5vh;
+            height: 50vh;
+            @include flexCenter(center, center );
+            flex-direction: column;
+            border: 1px solid red;
+
+            .contact-form{
+                width: 30%;
+                height: 40px;
+                position: relative;
+                // overflow: hidden;
+                border: 1px solid green;
+
+                input{
+                    width: 100%;
+                    height: 100%;
+                    color: rgb(65, 65, 65);
+                    padding-top:20px;
+                    border:none;
+                    outline: none;
+                }
+
+                label{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    pointer-events: none;
+                    border-bottom: 1px solid black;
+                }
+
+                label::after{
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    bottom: 0;
+                    border-bottom: 3px solid rgb(18, 80, 88);
+                    transform: translateX(-100%);
+                    transition: transform 0.5s ease;
+                    
+                }
+                input:focus + .label-name::after, 
+                input:valid + .label-name::after{
+                    transform: translateX(0%);
+                }
+
+                .content-name{
+                    position: absolute;
+                    bottom: 5px;
+                    left: 0;
+                    transition: all 0.3s ease;
+                }
+
+                input:focus + .label-name .content-name, 
+                input:valid + .label-name .content-name{
+                    transform: translateY(-150%);
+                    font-size: 14px;
+                }
+            }
+
+        }
+
+        
+    }
+
+    .map-container{
+        background-color: $oddsBlocks;
+        min-height: 80vh;
+        .block-title{min-height: 25vh;}
+        .map{
+            margin-top: 5vh;
+            width: 100%;
+            height: 100%;
+            border: 1px solid red;
+            iframe{
+                width: 100%;
+            }
+        }
+    }
 }
 
 
@@ -470,6 +573,8 @@ header{
                 .media{grid-row: span 2;}
             }
         }
+
+
     }
 
 
