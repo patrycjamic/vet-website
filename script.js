@@ -116,14 +116,51 @@ function runFunctions(){
 runFunctions();
 
 
-var docWidth = document.documentElement.offsetWidth;
+// var docWidth = document.documentElement.offsetWidth;
 
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
-  }
-);
+// [].forEach.call(
+//   document.querySelectorAll('*'),
+//   function(el) {
+//     if (el.offsetWidth > docWidth) {
+//       console.log(el);
+//     }
+//   }
+// );
 
+
+let blueIcons = document.querySelectorAll(".icon > .img-container");
+
+// blueIcon.addEventListener("click", ()=>{
+//     blueIcon.style.backgroundColor = "yellow";
+// })
+
+// for(let i = 0; i < blueIcon.length; i++){
+//     blueIcon[i].addEventListener("toggle", ()=>{
+//         blueIcon[i].style.backgroundColor = "yellow";
+//     })
+// }
+
+blueIcons.forEach(function(userItem){
+
+    // userItem.addEventListener("toggle",()=>{
+        
+    // })
+
+
+    userItem.addEventListener("mouseenter", ()=>{
+        
+        userItem.style.backgroundColor = "yellow";
+    })
+
+    userItem.addEventListener("mouseleave", ()=>{
+        
+        userItem.style.backgroundColor = "#acd7e6";
+    })
+
+
+
+})
+
+
+console.log(blueIcon);
+// console.log(node.parentNode.childNodes[]);
