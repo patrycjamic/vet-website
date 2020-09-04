@@ -222,14 +222,14 @@ header{
     }
 
     .block-1{
-        min-height: 80vh;
+        min-height: 90vh;
         background-color:$oddsBlocks;
 
         .block-title{min-height: 30vh;}
 
         .icons{
             @include flexCenter(space-evenly, center);
-            margin-top: 5vh;
+            margin-top: 10vh;
             flex-wrap: wrap;
 
             .icon{
@@ -282,7 +282,7 @@ header{
 
     .block-2{
         // height: 80vh;
-        min-height: 80vh;
+        min-height: 90vh;
         background-color: $dominantColor;
 
         .block-title{min-height: 25vh;}
@@ -290,7 +290,7 @@ header{
         .vets{
             @include flexCenter(center, center);
             flex-wrap: wrap;
-            margin-top: 7vh;
+            margin-top: 10vh;
             .vet{
                 margin: auto 15px;
                 width: 500px;
@@ -428,13 +428,14 @@ header{
     }
 
     .block-4{
-        min-height: 80vh;
+        min-height: 90vh;
         .block-title{min-height: 25vh;}
         background-color: $dominantColor;
+
         .container{
             margin-top: 5vh;
             height: 50vh;
-            @include flexCenter(center, center );
+            @include flexCenter(space-around, center );
             flex-direction: column;
             border: 1px solid red;
 
@@ -442,7 +443,7 @@ header{
                 width: 30%;
                 height: 40px;
                 position: relative;
-                // overflow: hidden;
+                overflow: hidden;
                 border: 1px solid green;
 
                 input{
@@ -508,7 +509,6 @@ header{
             margin-top: 5vh;
             width: 100%;
             height: 100%;
-            border: 1px solid red;
             iframe{
                 width: 100%;
             }
