@@ -481,7 +481,7 @@ header .navbar .burger div {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: white;
+  color: #fff;
   font-size: 20px;
   pointer-events: none;
   z-index: 1;
@@ -556,44 +556,44 @@ header .navbar .burger div {
 }
 
 .main-content .block-4 .container {
-  margin-top: 5vh;
-  height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  padding: 5vh 0;
+  min-height: 50vh;
+  row-gap: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "imie nazwisko" "email email" "tresc tresc" "btn btn";
+  width: 50%;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border: 1px solid red;
+  margin: 0 auto;
 }
 
 .main-content .block-4 .container .contact-form {
-  width: 30%;
-  height: 40px;
+  width: 300px;
+  height: 50px;
   position: relative;
   overflow: hidden;
-  border: 1px solid green;
 }
 
 .main-content .block-4 .container .contact-form input {
   width: 100%;
   height: 100%;
   color: #414141;
+  padding-top: 10px;
   padding-left: 5px;
   border: none;
   outline: none;
+  font-size: 15px;
 }
 
 .main-content .block-4 .container .contact-form label {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 0px;
+  left: 0px;
   height: 100%;
   width: 100%;
   pointer-events: none;
@@ -606,8 +606,8 @@ header .navbar .burger div {
   height: 100%;
   width: 100%;
   left: 0;
-  bottom: 0;
-  border-bottom: 3px solid #125058;
+  bottom: -1px;
+  border-bottom: 3px solid #1d3b3f;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -616,25 +616,110 @@ header .navbar .burger div {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.main-content .block-4 .container .contact-form input:focus + .label-name::after,
-.main-content .block-4 .container .contact-form input:valid + .label-name::after {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
 .main-content .block-4 .container .contact-form .content-name {
+  font-size: 15px;
   position: absolute;
-  bottom: 5px;
-  left: 0;
+  bottom: 2px;
+  left: 3px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  color: black;
 }
 
 .main-content .block-4 .container .contact-form input:focus + .label-name .content-name,
 .main-content .block-4 .container .contact-form input:valid + .label-name .content-name {
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
+  font-size: 12px;
+}
+
+.main-content .block-4 .container .contact-form input:focus + .label-name::after,
+.main-content .block-4 .container .contact-form input:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.main-content .block-4 .container .email {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: email;
+  width: 500px;
+}
+
+.main-content .block-4 .container .imie {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: imie;
+}
+
+.main-content .block-4 .container .nazwisko {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nazwisko;
+}
+
+.main-content .block-4 .container .area {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: tresc;
+  -webkit-column-span: 2;
+          column-span: 2;
+  padding-left: 2px;
   font-size: 14px;
+  width: 500px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  border: 2px solid #1d3b3f;
+  outline: none;
+}
+
+.main-content .block-4 .container .area::-webkit-input-placeholder {
+  color: #1f1613;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.main-content .block-4 .container .area:-ms-input-placeholder {
+  color: #1f1613;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.main-content .block-4 .container .area::-ms-input-placeholder {
+  color: #1f1613;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.main-content .block-4 .container .area::placeholder {
+  color: #1f1613;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.main-content .block-4 .container .btn {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: btn;
+  -webkit-column-span: 2;
+          column-span: 2;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  border: 2px solid #1d3b3f;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+}
+
+.main-content .block-4 .container .btn:hover {
+  background-color: #1d3b3f;
+  color: #d1caca;
+  border: 2px solid #fff;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .main-content .map-container {
