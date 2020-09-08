@@ -1,81 +1,80 @@
-
 // IMAGES SLIDER
 
-let sliderImages = document.querySelectorAll('.slide'),
-    arrowRight = document.querySelector('#arrow-right'),
-    arrowLeft = document.querySelector('#arrow-left'),
-    current = 0;
+const slideContainer = document.querySelector('.wrap');
+const slide = document.querySelector('.slides');
+const nextBtn = document.getElementById('next-btn');
+const prevBtn = document.getElementById('prev-btn');
+const interval = 3000;
+
+let slides = document.querySelectorAll('.slide');
+let index = 1;
+let slideId;
+
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
+
+firstClone.id = 'first-clone';
+lastClone.id = 'last-clone';
+
+slide.append(firstClone);
+slide.prepend(lastClone);
+
+const slideWidth = slides[index].clientWidth;
+console.log(slideWidth);
+
+slide.style.transform = `translateX(${-slideWidth * index}px)`;
+console.log(slides);
+
+const startSlide = ()=>{
+    slideId = setInterval(()=>{
+        moveToNext();
+
+    }, interval)
+};
+
+const getSlides = ()=> document.querySelectorAll('.slide');
 
 
-//Clear all images
-function reset(){
-    for(let i = 0; i< sliderImages.length; i++){
-        sliderImages[i].style.display = "none";
-
+slide.addEventListener('transitionend', ()=>{
+    slides = getSlides();
+    if(slides[index].id === firstClone.id){
+        slide.style.transition = 'none';
+        index = 1;
+        slide.style.transform = `translateX(${-slideWidth * index}px)`;
     }
-}
-
-
-// Init slider
-function startSlide(){
-    reset();
-    sliderImages[0].style.display = 'block';
-
-}
-
-//Show prev
-function slideLeft(){
-    reset();
-    sliderImages[current-1].style.display = 'block';
-    current--;
-}
-
-
-
-//Show next
-function slideRight(){
-    reset();
-    sliderImages[current+1].style.display = 'block';
-    current++;
-}
-
-// Left arrow click
-arrowLeft.addEventListener('click', ()=>{
-
-    if(current === 0){
-        current = sliderImages.length;
+    if(slides[index].id === lastClone.id){
+        slide.style.transition = 'none';
+        index = slides.length - 2;
+        slide.style.transform = `translateX(${-slideWidth * index}px)`;
     }
-    slideLeft();
+});
+
+const moveToNext = ()=>{
+    slides = getSlides();
+    if(index >= slides.length - 1) return;
+    index++;
+    slide.style.transform = `translateX(${-slideWidth * index}px)`;
+    slide.style.transition = '.7s';
+}
+
+const moveToPrev = ()=>{
+    if(index <= 0) return;
+    index--;
+    slide.style.transform = `translateX(${-slideWidth * index}px)`;
+    slide.style.transition = '.7s';
+}
+
+slideContainer.addEventListener('mouseenter', ()=>{
+    clearInterval(slideId);
 })
 
-//Right arrow click
-arrowRight.addEventListener('click', ()=>{
-    // clearInterval();
-    // document.querySelector('.navbar').style.border = "1px solid black";
+slideContainer.addEventListener('mouseleave', startSlide);
 
-    if(current === sliderImages.length -1){
-        current = -1;
-
-    }
-    slideRight();
-})
+nextBtn.addEventListener('click', moveToNext);
+prevBtn.addEventListener('click', moveToPrev);
 
 
-
-// setInterval(function(){
-//     if(current === sliderImages.length -1){
-//         current = -1;
-
-//     }
-//     slideRight();
-// }, 4000);
-
-
-
-
-
-
-// MENU
+// BURGER MENU
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
@@ -103,77 +102,13 @@ const navSlide = () => {
 
 }
 
-
-// All functions
-function runFunctions(){
-    //Start slide function
-    startSlide();
-    // Run function
-    navSlide();
-
-}
-
-runFunctions();
-
-
-// var docWidth = document.documentElement.offsetWidth;
-
-// [].forEach.call(
-//   document.querySelectorAll('*'),
-//   function(el) {
-//     if (el.offsetWidth > docWidth) {
-//       console.log(el);
-//     }
-//   }
-// );
-
-
-
-// let blueIcons = document.querySelectorAll(".icon > .img-container");
-
-// // blueIcon.addEventListener("click", ()=>{
-// //     blueIcon.style.backgroundColor = "yellow";
-// // })
-
-// // for(let i = 0; i < blueIcon.length; i++){
-// //     blueIcon[i].addEventListener("toggle", ()=>{
-// //         blueIcon[i].style.backgroundColor = "yellow";
-// //     })
-// // }
-
-// blueIcons.forEach(function(userItem){
-
-//     // userItem.addEventListener("toggle",()=>{
-        
-//     // })
-
-
-//     userItem.addEventListener("mouseenter", ()=>{
-        
-//         userItem.style.backgroundColor = "yellow";
-//     })
-
-//     userItem.addEventListener("mouseleave", ()=>{
-        
-//         userItem.style.backgroundColor = "#acd7e6";
-//     })
-
-
-
-// })
-
-
-// console.log(blueIcon);
-// // console.log(node.parentNode.childNodes[]);
+// HEADINGS ANIMATION
 
 function scrollAppear(){
     let text = document.querySelectorAll(".block-title");
     let textPosition; 
     let screenPosition = window.innerHeight /1.2;
-    
-    // if(textPosition < screenPosition){
-    //     text.classList.add('appear');
-    // }
+
     text.forEach(function(item){
         textPosition = item.getBoundingClientRect().top;
         if(textPosition < screenPosition){
@@ -181,10 +116,27 @@ function scrollAppear(){
         }
     })
 
-
-
 }
 
-    window.addEventListener('scroll', scrollAppear);
 
-// scrollAppear();
+// All functions
+function runFunctions(){
+    startSlide();
+    navSlide();
+    window.addEventListener('scroll', scrollAppear);
+}
+
+runFunctions();
+
+
+
+
+
+
+
+
+
+
+
+
+
