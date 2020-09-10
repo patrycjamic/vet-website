@@ -605,9 +605,10 @@ header{
             min-height: 80vh;
             .gallery{
                 grid-template-columns: repeat(2, 1fr);
-                .w-3{grid-column: span 2;}
-                grid-auto-rows: 50px 150px;
-                .media{grid-row: span 2;}
+                .gallery-container{
+                    grid-row: span 2;
+                    grid-column: span 2;
+                }
             }
         }
 

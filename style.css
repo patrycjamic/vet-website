@@ -764,13 +764,10 @@ header .navbar .burger div {
   .main-content .block-3 .gallery {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 50px 150px;
   }
-  .main-content .block-3 .gallery .w-3 {
-    grid-column: span 2;
-  }
-  .main-content .block-3 .gallery .media {
+  .main-content .block-3 .gallery .gallery-container {
     grid-row: span 2;
+    grid-column: span 2;
   }
   .main-content .block-4 {
     min-height: 80vh;
