@@ -314,14 +314,14 @@ header .navbar .burger div {
   transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
 }
 
-.main-content .block-1 .icons .icon .img-container:hover {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
 .main-content .block-1 .icons .icon .img-container img {
   height: 45%;
   width: 45%;
+}
+
+.main-content .block-1 .icons .icon .img-container:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .main-content .block-1 .icons .icon .text-wrap {
