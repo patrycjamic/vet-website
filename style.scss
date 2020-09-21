@@ -7,18 +7,15 @@ $oddsBlocks: #f5f5f5;
     align-items: $align;
 }
 
-
 *{
     box-sizing: border-box;
     margin: 0;
-    padding:0;
-}
+    padding:0;}
 
 body{
     font-family: 'Poppins', sans-serif;
     width: 100vw;
-    overflow-x: hidden;
-}
+    overflow-x: hidden;}
 
 header{
     position: sticky;
@@ -472,7 +469,6 @@ header{
         }
     }
 }
-
 
 @media screen and(max-width:1024px){
     .menu-list{width: 60%;}
